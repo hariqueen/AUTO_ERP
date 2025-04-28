@@ -25,7 +25,7 @@ RENTAL_COMPANIES = {
         'mapping_file': os.path.join(MAPPING_DIR, 'test.json'),
         'erp_form_file': os.path.join(TEMPLATE_DIR, 'erp_form.csv'),
         'output_csv': os.path.join(OUTPUT_DIR, f'자동전표_한국렌탈_{CURRENT_DATE}.csv'),
-        'output_excel': os.path.join(OUTPUT_DIR, f'자동전표_한국렌탈_{CURRENT_DATE}.xlsx'),
+        'output_excel': os.path.join(OUTPUT_DIR, f'자동전표_한국렌탈_{CURRENT_DATE}.xls'),
         'partner_code': '101388',  # 거래처 코드 (한국렌탈: 101388)
         'cost_center': '5020',     # 코스트센터(운영2)
         'expense_acct': '53000',   # 기본 비용 계정

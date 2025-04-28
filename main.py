@@ -77,13 +77,39 @@ def process_rental_company_with_voucher(uploaded_file_path, voucher_number):
     result_df = file_handler.prepare_file_with_template(erp_df, erp_form)
 
     # 저장
-    output_filename = f"자동전표_완성파일_{datetime.now().strftime('%Y%m%d')}.xlsx"
+    output_filename = f"자동전표_완성파일_{datetime.now().strftime('%Y%m%d')}.xls"
     output_path = os.path.join(cfg.OUTPUT_DIR, output_filename)
 
     os.makedirs(cfg.OUTPUT_DIR, exist_ok=True)
 
-    # 이제 준비된 result_df를 저장
-    result_df.to_excel(output_path, index=False, engine='openpyxl')
+    try:
+        # pyexcel_xls와 OrderedDict 모듈 임포트
+        from pyexcel_xls import save_data
+        from collections import OrderedDict
+        
+        # 데이터프레임을 리스트로 변환
+        headers = result_df.columns.tolist()
+        data = [headers]  # 헤더를 첫 번째 행으로 추가
+        
+        # 데이터프레임의 각 행을 리스트로 변환하여 data에 추가
+        for _, row in result_df.iterrows():
+            data.append(row.tolist())
+        
+        # OrderedDict 생성 (Sheet1이라는 이름의 시트에 데이터 저장)
+        data_dict = OrderedDict()
+        data_dict["Sheet1"] = data
+        
+        # xls 파일로 저장
+        save_data(output_path, data_dict)
+        
+        print(f"Excel 97-2003 형식(.xls)으로 파일 저장 완료: {output_path}")
+    except Exception as e:
+        print(f"Excel 97-2003 형식 저장 중 오류 발생: {e}")
+        # 오류 발생 시 기존 방식으로 저장
+        backup_path = output_path.replace('.xls', '.xlsx')
+        result_df.to_excel(backup_path, index=False, engine='openpyxl')
+        output_path = backup_path
+        print(f"대체 형식(.xlsx)으로 파일 저장 완료: {output_path}")
 
     return output_path
 

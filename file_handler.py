@@ -49,16 +49,19 @@ def save_to_files(result_df: pd.DataFrame, output_csv: str, output_excel: str, e
     except Exception as e:
         print(f"CSV 파일 저장 중 오류 발생: {e}")
     
-    # Excel 파일 저장
-    print(f"\n'{output_excel}'로 엑셀 파일 저장 중...")
+    # Excel 파일 저장 (.xls 형식으로 변경)
+    xls_output_excel = output_excel.replace('.xlsx', '.xls')
+    print(f"\n'{xls_output_excel}'로 엑셀 파일 저장 중...")
     try:
-        result_df.to_excel(output_excel, index=False, engine='openpyxl')
-        print(f"처리 완료: {erp_data_count}개 행이 '{output_excel}'에 저장됨")
-        print(f"엑셀 파일이 성공적으로 생성되었습니다: {os.path.abspath(output_excel)}")
+        # xlwt 엔진을 사용하여 Excel 97-2003 형식(.xls)으로 저장
+        result_df.to_excel(xls_output_excel, index=False, engine='xlwt')
+        print(f"처리 완료: {erp_data_count}개 행이 '{xls_output_excel}'에 저장됨")
+        print(f"엑셀 파일이 성공적으로 생성되었습니다: {os.path.abspath(xls_output_excel)}")
     except Exception as e:
         print(f"엑셀 파일 저장 중 오류 발생: {e}")
         print("CSV 파일은 정상적으로 저장되었습니다.")
         print("CSV 파일을 열 때는 Excel의 '데이터' 탭에서 '텍스트/CSV에서' 기능을 사용하시기 바랍니다.")
+        print(f"오류 내용: {e}")
 
 
 def prepare_file_with_template(erp_df: pd.DataFrame, erp_form: pd.DataFrame) -> pd.DataFrame:
