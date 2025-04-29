@@ -1,0 +1,1311 @@
+[
+  {
+    "CD_ACCT": "45871",
+    "past": "ACI2",
+    "present": "ACI2",
+    "CD_PJT": 1004248,
+    "name": "ACI2((주)에이스침대)_사업5_CVS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "AEI",
+    "present": "AEI",
+    "CD_PJT": 1003066,
+    "name": "AEI(Ace Life Inbound)_사업5_CVS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "AICC R&D실",
+    "present": "AICC R&D실",
+    "CD_PJT": 1007331,
+    "name": "IT부문 기업부설연구소_AICC R&D실"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "AICC 개발실",
+    "present": "AICC 개발실",
+    "CD_PJT": 1007317,
+    "name": "IT부문 기업부설연구소_AICC 개발실"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "AICC 플랫폼실",
+    "present": "AICC 플랫폼실",
+    "CD_PJT": 1007348,
+    "name": "IT부문 기업부설연구소_AICC 플랫폼실"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "AII",
+    "present": "AII",
+    "CD_PJT": 1003138,
+    "name": "AII(AIG손해보험 고객 상담)_사업1_CRM_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "AII5",
+    "present": "AII5",
+    "CD_PJT": 1004295,
+    "name": "AII5(AIG손해보험)_사업1_CRM_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "AII7",
+    "present": "AII7",
+    "CD_PJT": 1004299,
+    "name": "AII7(AIG손해보험)_사업1_CRM_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "API",
+    "present": "API",
+    "CD_PJT": 1004315,
+    "name": "API(에어프레미아)_사업6_CSE_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "BBI",
+    "present": "BBI",
+    "CD_PJT": 1004190,
+    "name": "BBI(버츠비코리아 IN)_AICC사업_서비스A본부_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "BCP유휴",
+    "present": "COST 공통",
+    "CD_PJT": 502999,
+    "name": "Cost 공통 PJT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "BDI",
+    "present": "BDI",
+    "CD_PJT": 1004472,
+    "name": "BDI((주)우아한형제들)_사업3_플랫폼_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "BJI",
+    "present": "BJI",
+    "CD_PJT": 1004347,
+    "name": "BJI(주식회사 번개장터)_AICC사업_서비스A_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "BKI2",
+    "present": "BKI2",
+    "CD_PJT": 1003642,
+    "name": "BKI2(보쉬코리아 IN_전동공구관련)_AICC사업_서비스A본부_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "BLI",
+    "present": "BLI",
+    "CD_PJT": 1004306,
+    "name": "BLI((주)블랭크코퍼레이션)_사업3_플랫폼_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "BNI",
+    "present": "BNI",
+    "CD_PJT": 1003125,
+    "name": "BNI(카디프생명 내부 CS센터)_사업5_CVS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "BPI",
+    "present": "BPI",
+    "CD_PJT": 1004337,
+    "name": "BPI((주)버킷플레이스)_사업3_플랫폼_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "BPI2",
+    "present": "BPI2",
+    "CD_PJT": 1004455,
+    "name": "BPI2(버킷플레이스(오늘의집))_사업3_플랫폼_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "BTI",
+    "present": "BTI",
+    "CD_PJT": 1003640,
+    "name": "BTI((주)베네통코리아 IN)_AICC사업_서비스A본부_IN"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "CEM사업본부",
+    "present": "CEM 사업본부",
+    "CD_PJT": 1004092,
+    "name": "사업7_CEM 사업본부"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "CFI",
+    "present": "CFI",
+    "CD_PJT": 1004302,
+    "name": "CFI((주)엑심베이(카페24+엑심베이 용역계약))_사업6_CSE_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "CII",
+    "present": "CII",
+    "CD_PJT": 1004440,
+    "name": "CII(캐롯손해보험)_사업2_DTS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "CLI",
+    "present": "CLI",
+    "CD_PJT": 1003053,
+    "name": "CLI(Chungdam Learning I/B)_AICC사업_서비스A_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "CMI",
+    "present": "CMI",
+    "CD_PJT": 1003023,
+    "name": "CMI_사업6_CSE_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "CMI3",
+    "present": "CMI3",
+    "CD_PJT": 1004469,
+    "name": "CMI3(삼성물산(주))_사업6_CSE_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "COI",
+    "present": "COI",
+    "CD_PJT": 1004432,
+    "name": "COI(코인원)_사업3_CX_IN"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "CRM사업본부",
+    "present": "CRM 사업본부",
+    "CD_PJT": 1004091,
+    "name": "사업1_CRM 사업본부"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "CSE사업본부",
+    "present": "CSE 사업본부",
+    "CD_PJT": 1004092,
+    "name": "사업7_CEM 사업본부"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "CSS사업본부",
+    "present": "CSS 사업본부",
+    "CD_PJT": 1004094,
+    "name": "사업2_CSS 사업본부"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "CUI2",
+    "present": "CUI2",
+    "CD_PJT": 1003650,
+    "name": "CUI2(ACE손해보험 IN)_사업5_CMI_IN"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "CVS사업본부",
+    "present": "CVS 사업본부",
+    "CD_PJT": 1004093,
+    "name": "사업5_CVS 사업본부"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "CX사업본부",
+    "present": "CX 사업본부",
+    "CD_PJT": 1004268,
+    "name": "사업3_CX 사업본부"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "DBI2",
+    "present": "DBI2",
+    "CD_PJT": 1003617,
+    "name": "DBI2(동부화재 IN_통화품질모니터링)_사업5_CMI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "DBI3",
+    "present": "DBI3",
+    "CD_PJT": 1004189,
+    "name": "DBI3(DB손해보험 OUT)_사업5_CMI_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "DCJ1",
+    "present": "DCJ1",
+    "CD_PJT": 1004215,
+    "name": "DCJ1(씨제이이엔엠,아이지에스 IN)_전략/게임_전략_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "DHO",
+    "present": "DHO",
+    "CD_PJT": 1004242,
+    "name": "DHO(딜리버리히어로코리아)_사업6_CSE_OUT"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "DI본부",
+    "present": "DI본부",
+    "CD_PJT": 1007310,
+    "name": "컨설팅_DI본부"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "DKI",
+    "present": "DKI",
+    "CD_PJT": 1004280,
+    "name": "DKI(동국제약)_사업5_CVS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "DNI",
+    "present": "DNI",
+    "CD_PJT": 1004283,
+    "name": "DNI(주식회사 다날)_사업6_CSE_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "DTS사업본부",
+    "present": "DTS 사업본부",
+    "CD_PJT": 1004095,
+    "name": "사업2 DTS 사업본부"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "ELI3",
+    "present": "ELI3",
+    "CD_PJT": 1004308,
+    "name": "ELI3(이랜드 이츠)_AICC사업_서비스A본부_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "ESI",
+    "present": "ESI",
+    "CD_PJT": 1004411,
+    "name": "ESI((주)에센루)_AICC사업_서비스A본부_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "FNI",
+    "present": "FNI",
+    "CD_PJT": 1003635,
+    "name": "FNI(F&F,바닐라코 IN)_AICC사업_서비스A본부_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "GGI",
+    "present": "GGI",
+    "CD_PJT": 1004410,
+    "name": "GGI(경기도일자리재단)_사업6_CSE_IN"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "Global운영본부",
+    "present": "글로벌사업부문",
+    "CD_PJT": 1004362,
+    "name": "글로벌사업부문"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "GOC1",
+    "present": "GOC1",
+    "CD_PJT": 1004122,
+    "name": "GOC1(펍지주식회사 IN)_전략/게임_게임_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "GOC2",
+    "present": "GOC2",
+    "CD_PJT": 1004123,
+    "name": "GOC2(펍지주식회사 IN)_전략/게임_게임_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "GPO",
+    "present": "GPO",
+    "CD_PJT": 1004473,
+    "name": "GPO((주)지앤파트너)_사업7_CEM_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "GSI",
+    "present": "GSI",
+    "CD_PJT": 1003149,
+    "name": "GSI(GS텔레서비스)_사업2_DTS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "HAI",
+    "present": "HAI",
+    "CD_PJT": 1004390,
+    "name": "HAI((주)핸디즈)_사업6_CSE_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "HBI",
+    "present": "HBI",
+    "CD_PJT": 1003587,
+    "name": "HBI(헬스밸런스)_AICC사업_서비스A본부_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "HDC",
+    "present": "HDC",
+    "CD_PJT": 1004433,
+    "name": "HDC(현대해상)_사업5_CMI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "HDI2",
+    "present": "HDI2",
+    "CD_PJT": 1004088,
+    "name": "HDI2(소만사 IN)_AICC사업_서비스A_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "HDL",
+    "present": "HDL",
+    "CD_PJT": 1004388,
+    "name": "HDL(현대해상화재보험)_사업5_CMI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "HGI",
+    "present": "HGI",
+    "CD_PJT": 1004293,
+    "name": "HGI((주)한화갤러리아)_AICC사업_서비스A_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "HHQ",
+    "present": "HHQ",
+    "CD_PJT": 1004291,
+    "name": "HHQ(한화손해보험)_사업1_TIM_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "HSI",
+    "present": "HSI",
+    "CD_PJT": 1003032,
+    "name": "HSI(Home&Shopping Inbound)_사업3_OLC_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "HSI2",
+    "present": "HSI2",
+    "CD_PJT": 1004317,
+    "name": "HSI2((주)홈앤쇼핑_부산센터)_사업3_OLC_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "HKA",
+    "present": "HKA",
+    "CD_PJT": 1004192,
+    "name": "HKA(흥국생명 ASP)_사업7_CEM_ASP"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "HKI",
+    "present": "HKI",
+    "CD_PJT": 1004332,
+    "name": "HKI(한국투자증권)_사업5_CMI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "HMI",
+    "present": "HMI",
+    "CD_PJT": 1004443,
+    "name": "HMI(한글과컴퓨터)_AICC사업_서비스A본부_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "HWI",
+    "present": "HWI",
+    "CD_PJT": 1004348,
+    "name": "HWI((주)버드뷰))_AICC사업_서비스A_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "IMI",
+    "present": "IMI",
+    "CD_PJT": 1003580,
+    "name": "IMI_사업6_BPI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "IPI",
+    "present": "IPI",
+    "CD_PJT": 1004119,
+    "name": "IPI(인터파크 CS 상담 in)_사업6_CSE_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "IPI4",
+    "present": "IPI4",
+    "CD_PJT": 1004438,
+    "name": "IPI4((주)인터파크트리플)_사업6_BPI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "IPI5",
+    "present": "IPI5",
+    "CD_PJT": 1004461,
+    "name": "IPI5((주)인터파크트리플)_사업6_BPI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "IPI6",
+    "present": "IPI6",
+    "CD_PJT": 1004464,
+    "name": "IPI6((주)인터파크트리플)_사업6_BPI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "IT",
+    "present": "IT",
+    "CD_PJT": 1004043,
+    "name": "IT부문"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "IT부문",
+    "present": "IT부문",
+    "CD_PJT": 1004043,
+    "name": "IT부문"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "JJI",
+    "present": "JJI",
+    "CD_PJT": 1003604,
+    "name": "JJI(한국지역정보개발원)_사업6_BPI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "JJI3",
+    "present": "JJI3",
+    "CD_PJT": 1004439,
+    "name": "JJI3(한국지역정보개발원)_사업6_BPI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KAI",
+    "present": "KAI",
+    "CD_PJT": 1004318,
+    "name": "KAI(기아(주))_사업1_TIM_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KAI2",
+    "present": "KAI2",
+    "CD_PJT": 1004445,
+    "name": "KAI2(기아(주))_사업1_TIM_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KBA4",
+    "present": "KBA4",
+    "CD_PJT": 1004266,
+    "name": "KBA4(KB국민은행)_사업2_CSS_ASP"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KBF",
+    "present": "KBF",
+    "CD_PJT": 1004413,
+    "name": "KBF(KB국민카드)_사업1_CRM_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KBH",
+    "present": "KBH",
+    "CD_PJT": 1004305,
+    "name": "KBH(KB손해보험)_사업2_TCS_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KBL",
+    "present": "KBL",
+    "CD_PJT": 1003639,
+    "name": "KBL(KB손해보험 IN)_사업2_TCS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KBM",
+    "present": "KBM",
+    "CD_PJT": 1004365,
+    "name": "KBM(KB국민은행)_사업2_TCS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KBO",
+    "present": "KBO2",
+    "CD_PJT": 1003013,
+    "name": "KBO2(KB card Outbound2)_사업2_CSS_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KBO2",
+    "present": "KBO2",
+    "CD_PJT": 1003013,
+    "name": "KBO2(KB card Outbound2)_사업2_CSS_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KBO5",
+    "present": "KBO5",
+    "CD_PJT": 1003020,
+    "name": "KBO5(KB Card Outbound5)_사업2_CSS_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KBO7",
+    "present": "KBO2",
+    "CD_PJT": 1003013,
+    "name": "KBO2(KB card Outbound2)_사업2_CSS_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KBQ",
+    "present": "KBQ",
+    "CD_PJT": 1004304,
+    "name": "KBQ(KB손해보험)_사업2_TCS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KCA",
+    "present": "KCA",
+    "CD_PJT": 902043,
+    "name": "KCA(Kb kookmin bank Court Adm)_사업1_CRM_파견"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KHI",
+    "present": "KHI",
+    "CD_PJT": 1004400,
+    "name": "KHI(한국의학연구소)_AICC사업_서비스A본부_ASP"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KIO1",
+    "present": "KIO1",
+    "CD_PJT": 502037,
+    "name": "KB KIO(KIO1)_사업2_CSS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KIO2",
+    "present": "KIO2",
+    "CD_PJT": 502089,
+    "name": "KB 서울콜센터 In-Out/B (KIO2)_사업2_CSS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KIO3",
+    "present": "KIO3",
+    "CD_PJT": 702035,
+    "name": "KB KIO3_사업2_CSS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KIO4",
+    "present": "KIO4",
+    "CD_PJT": 1003017,
+    "name": "KB KIO4_사업2_TCS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KIO5",
+    "present": "KIO5",
+    "CD_PJT": 1003641,
+    "name": "KIO5(KB국민은행 IN)_사업2_TCS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KKB",
+    "present": "KKB",
+    "CD_PJT": 1004247,
+    "name": "KKB(카카오뱅크(주))_사업5_CMI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KKB2",
+    "present": "KKB2",
+    "CD_PJT": 1004309,
+    "name": "KKB2(카카오뱅크)_사업5_CMI_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "KWI",
+    "present": "KWI",
+    "CD_PJT": 1004406,
+    "name": "KWI(키움증권주식회사)_사업6_BPI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "LHI2",
+    "present": "LHI2",
+    "CD_PJT": 1004074,
+    "name": "LHI2(롯데홈쇼핑 IN)_사업6_CSE_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "LIO1",
+    "present": "LIO",
+    "CD_PJT": 702025,
+    "name": "LIO1 롯데카드 인/아웃(LIO1)_사업2_DTS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "LLI",
+    "present": "LLI",
+    "CD_PJT": 1004204,
+    "name": "LLI ((주)락앤락 IN)_전략/게임_전략_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "LNI2",
+    "present": "LNI2",
+    "CD_PJT": 1003597,
+    "name": "LNI2(라이나생명 인바운드 고객상담)_사업5_CMI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "LNI3",
+    "present": "LNI3",
+    "CD_PJT": 1003612,
+    "name": "LNI3(라이나생명 전성기 IN)_사업5_CMI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "LOB",
+    "present": "LOB",
+    "CD_PJT": 1004378,
+    "name": "LOB(롯데카드)_사업2_DTS_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "LOI",
+    "present": "LOI",
+    "CD_PJT": 1004343,
+    "name": "LOI(로젠택배)_사업3_CX_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "MDM",
+    "present": "MDM",
+    "CD_PJT": 1002106,
+    "name": "MDM"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "MGI",
+    "present": "MGI",
+    "CD_PJT": 1004442,
+    "name": "MGI(미트박스 글로벌)_사업6_CSE_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "MIH",
+    "present": "MIH",
+    "CD_PJT": 1004345,
+    "name": "MIH(메리츠화재보험)_사업5_CMI_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "MIH2",
+    "present": "MIH2",
+    "CD_PJT": 1004470,
+    "name": "MIH2(메리츠화재)_사업5_CMI_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "MIO",
+    "present": "MIO",
+    "CD_PJT": 502078,
+    "name": "메트라이프 생명보험IN(MIO)_사업1_CRM_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "MIQ2",
+    "present": "MIQ2",
+    "CD_PJT": 1004352,
+    "name": "MIQ2(메리츠화재보험)_사업5_CMI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "MKI",
+    "present": "MKI",
+    "CD_PJT": 1004290,
+    "name": "MKI((주)컬리)_사업3_플랫폼_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "MKI2",
+    "present": "MKI2",
+    "CD_PJT": 1004382,
+    "name": "MKI2(컬리)_사업3_플랫폼_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "MMO",
+    "present": "MMO",
+    "CD_PJT": 1003095,
+    "name": "MMO(매일유업)_사업6_BPI_파견"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "MMP공통",
+    "present": "COST 공통",
+    "CD_PJT": 502999,
+    "name": "Cost 공통 PJT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "MOI",
+    "present": "MOI",
+    "CD_PJT": 1004419,
+    "name": "MOI((주)모먼츠컴퍼니)_AICC사업_서비스A_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "MVI",
+    "present": "MVI",
+    "CD_PJT": 1004384,
+    "name": "MVI(KG MVNO)_사업6_CSE_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "NBI",
+    "present": "NBI",
+    "CD_PJT": 1004394,
+    "name": "NBI(이랜드월드)_사업3_CX_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "NII",
+    "present": "NII",
+    "CD_PJT": 1003629,
+    "name": "NII(NH투자증권 IN)_사업5_CMI_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "OBI",
+    "present": "MDM",
+    "CD_PJT": 1002106,
+    "name": "MDM"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "PEI",
+    "present": "PEI",
+    "CD_PJT": 1004265,
+    "name": "PEI((주)쁘띠엘린)_AICC사업_서비스A본부_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "PMO",
+    "present": "PMO",
+    "CD_PJT": 1004205,
+    "name": "PMO (우정사업조달센터 OUT)_사업6_CSE_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "RMI",
+    "present": "RMI",
+    "CD_PJT": 1004307,
+    "name": "RMI((주)리만코리아)_사업3_플랫폼_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SAC",
+    "present": "SAC",
+    "CD_PJT": 1004383,
+    "name": "SAC_AICC사업_서비스A본부IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SCA",
+    "present": "MDM",
+    "CD_PJT": 1002106,
+    "name": "MDM"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SCC2",
+    "present": "SCC2",
+    "CD_PJT": 1003011,
+    "name": "SCC2(Samsung Card Crm2)_사업5_CMI_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SCF",
+    "present": "SCF",
+    "CD_PJT": 1004465,
+    "name": "SCF(삼성카드(주))_사업1_CRM_OUT"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "SF1사업본부",
+    "present": "SF1사업본부",
+    "CD_PJT": 1007327,
+    "name": "사업1_SF1 사업본부"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SFO",
+    "present": "SFO2",
+    "CD_PJT": 1004397,
+    "name": "SFO2(삼성화재)_사업1_SF1_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SHC3",
+    "present": "SHC3",
+    "CD_PJT": 1004372,
+    "name": "SHC3(신한카드)_사업1_CRM_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SHO",
+    "present": "SHO",
+    "CD_PJT": 802065,
+    "name": "SHO (SinHan card Outbound)_사업1_CRM_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SHO7",
+    "present": "SHO7",
+    "CD_PJT": 1003155,
+    "name": "SHO7(신한카드 쇼핑안심서비스TM)_사업1_CRM_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SHO9",
+    "present": "SHO9",
+    "CD_PJT": 1003630,
+    "name": "SHO9(신한카드 OUT_마이카 서비스)_사업1_CRM_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SLH1",
+    "present": "SLH1",
+    "CD_PJT": 1003582,
+    "name": "SLH1(삼성생명 마케팅동의TM)_사업7_CEM_파견"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SLI",
+    "present": "SLI",
+    "CD_PJT": 1003130,
+    "name": "SLI(신한생명보험관련응대및해피콜)_사업5_CVS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SLI2",
+    "present": "SLI2",
+    "CD_PJT": 1004180,
+    "name": "SLI2(신한생명 IN)_사업5_CVS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SLI6",
+    "present": "SLI6",
+    "CD_PJT": 1004450,
+    "name": "SLI6(신한라이프생명보험)_사업5_CVS_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SLO",
+    "present": "SLO",
+    "CD_PJT": 1003144,
+    "name": "SLO(삼성생명 대출 TM 업무)_사업7_CEM_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SLO2",
+    "present": "SLO2",
+    "CD_PJT": 1004136,
+    "name": "SLO2(삼성생명 Out)_사업7_CEM_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SLO3",
+    "present": "SLO3",
+    "CD_PJT": 1004168,
+    "name": "SLO3(삼성생명 OUT)_사업7_CEM_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SSC1",
+    "present": "SSC1",
+    "CD_PJT": 1004323,
+    "name": "SSC1(삼성카드 주식회사)_사업5_CMI_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SSC3",
+    "present": "SSC3",
+    "CD_PJT": 1004324,
+    "name": "SSC3(삼성카드 주식회사)_사업5_CMI_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "SSC9",
+    "present": "SSC9",
+    "CD_PJT": 1004322,
+    "name": "SSC9(삼성카드)_사업5_CMI_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "STI2",
+    "present": "STI2",
+    "CD_PJT": 1003119,
+    "name": "STI2(11번가 서울RM(Risk Management))_사업3_플랫폼_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "TAI",
+    "present": "TAI",
+    "CD_PJT": 1004486,
+    "name": "TAI((사)한국교과서협회)_사업5_CVS_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "TBI",
+    "present": "TBI",
+    "CD_PJT": 1004377,
+    "name": "TBI(타이드스퀘어)_사업6_CSE_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "TCI",
+    "present": "TCI2",
+    "CD_PJT": 1003622,
+    "name": "TCI2(트라이씨클 IN)_사업6_CSE_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "TCI2",
+    "present": "TCI2",
+    "CD_PJT": 1003622,
+    "name": "TCI2(트라이씨클 IN)_사업6_CSE_IN"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "TCS사업본부",
+    "present": "TCS사업본부",
+    "CD_PJT": 1004096,
+    "name": "사업2_TCS 사업본부"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "TPI",
+    "present": "TPI",
+    "CD_PJT": 1003626,
+    "name": "TPI(티피링크 코리아 공유기 관련 IN-BOUND)_AICC사업_서비스A_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "TRI",
+    "present": "TRI",
+    "CD_PJT": 1003626,
+    "name": "TPI(티피링크 코리아 공유기 관련 IN-BOUND)_AICC사업_서비스A_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "TWI",
+    "present": "TWI",
+    "CD_PJT": 1004132,
+    "name": "TWI(팅크웨어 In)_AICC사업_서비스A_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "UCO",
+    "present": "UCO",
+    "CD_PJT": 1002099,
+    "name": "UCO(Uni Cef Outbound)_사업7_CEM_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "WBI",
+    "present": "WBI",
+    "CD_PJT": 1004407,
+    "name": "WBI(우리은행)_사업7_CEM_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "WCO2",
+    "present": "WCO2",
+    "CD_PJT": 1003107,
+    "name": "WCO2(우리카드 id-secure)_사업1_CRM_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "WFI",
+    "present": "WFI",
+    "CD_PJT": 1004408,
+    "name": "WFI(WWF세계자연기금)_AICC사업_서비스A본부_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "WIO",
+    "present": "WIO",
+    "CD_PJT": 802004,
+    "name": "WIO 우리은행 인바운드_사업7_CEM_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "WIO5",
+    "present": "WIO5",
+    "CD_PJT": 1003145,
+    "name": "WIO5(우리카드 CRM)_사업7_CEM_OUT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "WIO8",
+    "present": "WIO8",
+    "CD_PJT": 1004395,
+    "name": "WIO8(우리카드)_사업7_CEM_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "WUI",
+    "present": "WUI",
+    "CD_PJT": 1004475,
+    "name": "WUI(W컨셉)_AICC사업_서비스A본부_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "YGI",
+    "present": "YGI",
+    "CD_PJT": 1004156,
+    "name": "YGI((유)RGP Korea IN)_사업6_CSE_IN"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "ZZI",
+    "present": "ZZI",
+    "CD_PJT": 1004350,
+    "name": "ZZI(카카오스타일)_사업3_OLC_IN"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "게임서비스본부",
+    "present": "게임서비스본부",
+    "CD_PJT": 1007303,
+    "name": "게임서비스본부"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "경영기획팀",
+    "present": "경영기획팀",
+    "CD_PJT": 1003088,
+    "name": "경영지원_경영기획팀"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "경영지원총괄",
+    "present": "경영지원 총괄",
+    "CD_PJT": 502995,
+    "name": NaN
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "교육팀",
+    "present": "교육팀",
+    "CD_PJT": 901005,
+    "name": NaN
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "급여팀",
+    "present": "급여팀",
+    "CD_PJT": 1007322,
+    "name": "인사총괄_급여팀"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "기업부설연구소",
+    "present": "AICC플랫폼실",
+    "CD_PJT": 1007348,
+    "name": "IT부문 기업부설연구소_AICC 플랫폼실"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "메타엠공통",
+    "present": "COST 공통",
+    "CD_PJT": 502999,
+    "name": "Cost 공통 PJT"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "사업1부문",
+    "present": "사업1부문",
+    "CD_PJT": 1004081,
+    "name": "사업1부문"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "사업2부문",
+    "present": "사업2부문",
+    "CD_PJT": 1004082,
+    "name": "사업2부문"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "사업3부문",
+    "present": "사업3부문",
+    "CD_PJT": 1004084,
+    "name": "사업3부문"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "사업6부문",
+    "present": "사업6부문",
+    "CD_PJT": 1007336,
+    "name": "사업6부문"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "사업지원총괄",
+    "present": "사업총괄",
+    "CD_PJT": 1004276,
+    "name": "사업 총괄_전략기획팀"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "서비스A본부",
+    "present": "서비스A본부",
+    "CD_PJT": 1007308,
+    "name": "AICC사업_서비스A본부"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "솔루션운영팀",
+    "present": "솔루션운영팀",
+    "CD_PJT": 1004051,
+    "name": "IT부문 솔루션운영팀"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "유휴",
+    "present": "MDM_유휴",
+    "CD_PJT": 1002106,
+    "name": "MDM"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "인사지원총괄",
+    "present": "인사총괄",
+    "CD_PJT": 1007313,
+    "name": "인사총괄"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "인사총괄",
+    "present": "인사총괄",
+    "CD_PJT": 1007313,
+    "name": "인사총괄"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "인사팀",
+    "present": "인사팀",
+    "CD_PJT": 502994,
+    "name": "인사총괄_인사팀"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "인프라운영팀",
+    "present": "인프라운영팀",
+    "CD_PJT": 1004046,
+    "name": "IT부문 인프라운영팀"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "재경팀",
+    "present": "재경팀",
+    "CD_PJT": 1004184,
+    "name": "경영지원_재경팀"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "재택근무 공통",
+    "present": "Cost공통_재택",
+    "CD_PJT": 502999,
+    "name": "Cost 공통 PJT"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "전략/게임사업부문",
+    "present": "GOC2",
+    "CD_PJT": 1004123,
+    "name": "GOC2(펍지주식회사 IN)_전략/게임_게임_IN"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "전략기획팀",
+    "present": "전략기획팀",
+    "CD_PJT": 1004276,
+    "name": "사업 총괄_전략기획팀"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "전략사업본부",
+    "present": "전략사업본부",
+    "CD_PJT": 1007302,
+    "name": "전략사업본부"
+  },
+  {
+    "CD_ACCT": "45871",
+    "past": "정보보안팀",
+    "present": "정보보안팀",
+    "CD_PJT": 1004049,
+    "name": "IT부문 정보보안팀"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "지원부서(인사팀)",
+    "present": "채용1팀",
+    "CD_PJT": 1004108,
+    "name": "인사총괄_채용1팀"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "채용1팀",
+    "present": "채용1팀",
+    "CD_PJT": 1004108,
+    "name": "인사총괄_채용1팀"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "채용2팀",
+    "present": "채용2팀",
+    "CD_PJT": 1004109,
+    "name": "인사총괄_채용2팀"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "총무구매팀",
+    "present": "총무구매팀",
+    "CD_PJT": 502102,
+    "name": "경영지원_총무팀"
+  },
+  {
+    "CD_ACCT": "81902",
+    "past": "플랫폼사업본부",
+    "present": "플랫폼사업본부",
+    "CD_PJT": 1004174,
+    "name": "사업3_플랫폼 사업본부"
+  }
+]

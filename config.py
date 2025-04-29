@@ -17,12 +17,13 @@ for directory in [INPUT_DIR, OUTPUT_DIR, MAPPING_DIR, TEMPLATE_DIR]:
 
 # 현재 날짜 정보
 CURRENT_DATE = datetime.now().strftime("%Y%m%d")
+CURRENT_MONTH = datetime.now().strftime("%m")  # 현재 월 (01-12)
 
 # 렌탈사 설정 (추후 다른 렌탈사가 추가될 수 있음)
 RENTAL_COMPANIES = {
     '한국렌탈': {
         'input_file': os.path.join(INPUT_DIR, '한국렌탈_렌탈료.csv'),
-        'mapping_file': os.path.join(MAPPING_DIR, 'test.json'),
+        'mapping_file': os.path.join(MAPPING_DIR, 'team_name_mapping.json'),
         'erp_form_file': os.path.join(TEMPLATE_DIR, 'erp_form.csv'),
         'output_csv': os.path.join(OUTPUT_DIR, f'자동전표_한국렌탈_{CURRENT_DATE}.csv'),
         'output_excel': os.path.join(OUTPUT_DIR, f'자동전표_한국렌탈_{CURRENT_DATE}.xls'),
@@ -34,9 +35,9 @@ RENTAL_COMPANIES = {
         'cd_company': '1200',      # 회사 코드
         'cd_pc': '1200',           # 회계단위
         'cd_wdept': '1010',        # 작성부서
-        'amount_field': '3월렌탈료',  # 금액 필드명
-        'team_fields': ['3월 변경PJT', '2월 PJT'],  # 팀 정보 필드명 (우선순위 순)
-        'note_prefix': '테스트 한국렌탈㈜_PC 렌탈료',  # 적요 접두어
+        'amount_field': f'{CURRENT_MONTH}월렌탈료',  # 금액 필드명 (현재 월 기준)
+        'team_fields': [f'{CURRENT_MONTH}월 변경PJT', f'{int(CURRENT_MONTH)-1}월 PJT'],  # 팀 정보 필드명 (우선순위 순)
+        'note_prefix': '한국렌탈㈜_PC 렌탈료',  # 적요 접두어
     }
 }
 
