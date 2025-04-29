@@ -151,11 +151,21 @@ def set_management_items(erp_df: pd.DataFrame, df_filtered: pd.DataFrame, compan
     # 차변 행 설정
     debit_rows = erp_df["TP_DRCR"] == "1"
     erp_df.loc[debit_rows, "CD_CC"] = company_config['cost_center']  # 코스트센터
-    erp_df.loc[debit_rows, "CD_PJT"] = df_filtered["CD_PJT"].tolist()  # 프로젝트 코드
+    
+    # 부서코드 설정 (관리항목2) - 필수 항목으로 보임
+    if 'cd_wdept' in company_config:
+        erp_df.loc[debit_rows, "CD_DEPT"] = company_config['cd_wdept']  # 부서코드
+    
+    # CD_PJT를 정수형으로 확실하게 설정
+    pjt_codes = df_filtered["CD_PJT"].astype(int).tolist()
+    erp_df.loc[debit_rows, "CD_PJT"] = pjt_codes  # 프로젝트 코드
     
     # 대변 행 설정
     credit_rows = erp_df["TP_DRCR"] == "2"
     erp_df.loc[credit_rows, "CD_CC"] = company_config['cost_center']  # 코스트센터
-    # 대변에는 프로젝트 코드 필요 없음
+    
+    # 대변에도 부서코드 설정 필요
+    if 'cd_wdept' in company_config:
+        erp_df.loc[credit_rows, "CD_DEPT"] = company_config['cd_wdept']  # 부서코드
     
     return erp_df

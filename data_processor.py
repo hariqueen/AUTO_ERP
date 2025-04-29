@@ -183,7 +183,11 @@ def load_and_preprocess_data(input_file: str, config: Dict[str, Any], mapping_di
     # 매핑 정보에서 필드 추출
     df["팀명"] = df["매핑정보"].apply(lambda x: x["present"])
     df["CD_ACCT"] = df["매핑정보"].apply(lambda x: x["CD_ACCT"])
+    
+    # CD_PJT를 정수형으로 변환하는 부분
     df["CD_PJT"] = df["매핑정보"].apply(lambda x: x["CD_PJT"])
+    # 문자열이나 NaN 값 처리 후 정수형으로 변환
+    df["CD_PJT"] = pd.to_numeric(df["CD_PJT"], errors='coerce').fillna(1000).astype(int)
     
     # 적요 생성
     df["적요"] = f"{config['note_prefix']}(" + df["팀명"] + ")"
