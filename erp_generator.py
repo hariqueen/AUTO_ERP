@@ -38,7 +38,7 @@ def generate_erp_data(df_filtered: pd.DataFrame, company_config: Dict[str, Any])
         "ST_DOCU": [cfg.ERP_APPROVAL_STATUS] * len(df_filtered),
         "TP_DRCR": ["1"] * len(df_filtered),  # 차대구분 (1: 차변)
         "CD_ACCT": df_filtered["CD_ACCT"].tolist(),  # 각 팀별 계정 코드
-        "AMT": df_filtered["금액"].astype(str).tolist(), 
+        "AMT": df_filtered["금액"].apply(lambda x: str(int(x)) if pd.notnull(x) else "0").tolist(),
         "CD_PARTNER": [company_config['partner_code']] * len(df_filtered),
         "NM_NOTE": df_filtered["적요"].tolist(),
         "TP_DOCU": [cfg.ERP_PROCESS_STATUS] * len(df_filtered),

@@ -38,10 +38,39 @@ def load_and_preprocess_data(input_file: str, config: Dict[str, Any], mapping_di
     
     print(f"로딩 완료: {len(rental_df)}개 행 발견")
     
-    # 컬럼명 양쪽 공백 제거
+    # 컬럼명 양쪽 공백 제거 (더 엄격한 처리)
+    original_columns = rental_df.columns.tolist()
+    print("원본 컬럼명:")
+    for col in original_columns:
+        print(f"- '{col}'")
+
+    # 컬럼명에서 공백 제거 및 처리
     rental_df.columns = [col.strip() for col in rental_df.columns]
-    
-    print(f"파일 컬럼: {rental_df.columns.tolist()}")
+
+    # 처리된 컬럼명 출력
+    processed_columns = rental_df.columns.tolist()
+    print("처리 후 컬럼명:")
+    for i, col in enumerate(processed_columns):
+        orig = original_columns[i] if i < len(original_columns) else "?"
+        print(f"- '{orig}' -> '{col}'")
+
+    # 컬럼명 중복 체크 및 처리
+    if len(set(rental_df.columns)) != len(rental_df.columns):
+        print("경고: 공백 제거 후 중복된 컬럼명이 있습니다.")
+        duplicate_count = {}
+        new_columns = []
+        
+        for col in rental_df.columns:
+            if col in duplicate_count:
+                duplicate_count[col] += 1
+                new_col = f"{col}_{duplicate_count[col]}"
+                new_columns.append(new_col)
+                print(f"  중복 컬럼 처리: '{col}' -> '{new_col}'")
+            else:
+                duplicate_count[col] = 0
+                new_columns.append(col)
+        
+        rental_df.columns = new_columns
     
     # 필요한 필드 확인 및 조정
     # 필요한 컬럼이 있는지 확인
@@ -58,13 +87,18 @@ def load_and_preprocess_data(input_file: str, config: Dict[str, Any], mapping_di
     # 금액 필드 찾기 - 월별 자동 인식 패턴
     amount_field = None
     
-    # 1. 먼저 config에 설정된 필드 시도
-    if config['amount_field'] in rental_df.columns:
-        amount_field = config['amount_field']
-    else:
-        # 2. '[0-9]월렌탈료' 패턴 찾기 (정규식)
+    # 1. 먼저 config에 설정된 필드 시도 (앞뒤 공백 제거 후 비교)
+    clean_amount_field = config['amount_field'].strip()
+    for col in rental_df.columns:
+        if col.strip() == clean_amount_field:
+            amount_field = col
+            print(f"금액 필드로 '{amount_field}'를 설정값에서 찾았습니다.")
+            break
+    
+    if not amount_field:
+        # 2. 'N월렌탈료' 패턴 찾기 - 공백 고려
         import re
-        month_pattern = re.compile(r'^\s*(?:[0-9]{1,2})월\s*렌탈료\s*$')
+        month_pattern = re.compile(r'^\s*(?:[0-9]{1,2})월렌탈료\s*$')
         
         for col in rental_df.columns:
             if month_pattern.match(col):
@@ -81,17 +115,20 @@ def load_and_preprocess_data(input_file: str, config: Dict[str, Any], mapping_di
                     break
     
     if not amount_field:
-        # 컬럼명에 '원'이나 '￦' 또는 '₩'가 포함된 것을 amount_field로 사용
+        # 4. 컬럼명에 '원'이나 '￦' 또는 '₩'가 포함된 것을 amount_field로 사용
         for col in rental_df.columns:
             if '원' in col or '￦' in col or '₩' in col:
                 amount_field = col
                 print(f"금액 필드로 '{amount_field}'를 사용합니다.")
                 break
     
-    if not amount_field and len(rental_df.columns) > 2:
-        # 그래도 없으면 3번째 컬럼을 금액 필드로 사용
-        amount_field = rental_df.columns[2]
-        print(f"금액 필드를 명확히 식별할 수 없어 '{amount_field}'를 사용합니다.")
+    # 금액 필드를 찾을 수 없으면 오류 발생
+    if not amount_field:
+        raise ValueError("금액 필드를 찾을 수 없습니다. 파일 형식을 확인해주세요.")
+    
+    # 금액 필드 확인 출력
+    print(f"사용할 금액 필드: '{amount_field}'")
+    print(f"금액 필드 샘플 값: {rental_df[amount_field].head().tolist()}")
     
     # 팀 필드 찾기 - 월별 자동 인식 패턴
     team_fields = []
@@ -102,30 +139,27 @@ def load_and_preprocess_data(input_file: str, config: Dict[str, Any], mapping_di
         configured_team_fields = [configured_team_fields]
     
     for field in configured_team_fields:
-        if field in rental_df.columns:
-            team_fields.append(field)
+        clean_field = field.strip()
+        for col in rental_df.columns:
+            if col.strip() == clean_field:
+                team_fields.append(col)
+                print(f"팀 필드로 '{col}'를 설정값에서 찾았습니다.")
+                break
     
     if not team_fields:
-        # 2. '[0-9]월 변경PJT' 또는 '[0-9]월 PJT' 패턴 찾기 (정규식)
+        # 2. '[0-9]월 변경PJT' 패턴만 찾기 - 공백 허용
         import re
-        month_pjt_pattern = re.compile(r'^\s*(?:[0-9]{1,2})월\s*(?:변경)?PJT\s*$')
+        # 공백 허용하고 '변경PJT'만 찾는 패턴
+        month_pjt_pattern = re.compile(r'^\s*(?:[0-9]{1,2})월\s*변경PJT\s*$')
         
         for col in rental_df.columns:
             if month_pjt_pattern.match(col):
                 team_fields.append(col)
-                print(f"팀 필드로 '{col}'를 자동 인식했습니다.")
-        
-        # 3. 'PJT'가 포함된 필드 찾기
-        if not team_fields:
-            for col in rental_df.columns:
-                if 'PJT' in col or '팀' in col:
-                    team_fields.append(col)
-                    print(f"팀 필드로 '{col}'를 사용합니다.")
+                print(f"팀 필드로 '{col}'를 자동 인식했습니다 (변경PJT 패턴).")
     
-    if not team_fields and len(rental_df.columns) > 3:
-        # 그래도 없으면 4번째 컬럼을 팀 필드로 사용
-        team_fields = [rental_df.columns[3]]
-        print(f"팀 필드를 명확히 식별할 수 없어 '{team_fields[0]}'를 사용합니다.")
+    # 팀 필드를 찾을 수 없음 - 오류 발생
+    if not team_fields:
+        raise ValueError("팀 정보 필드를 찾을 수 없습니다. 파일 형식을 확인해주세요.")
     
     # 사용 가능한 컬럼만 선택
     available_columns = []
@@ -146,36 +180,30 @@ def load_and_preprocess_data(input_file: str, config: Dict[str, Any], mapping_di
     # 필요한 필드만 선택 (존재하는 컬럼만)
     df = rental_df[available_columns].copy()
     
-    # 금액 필드 변환 (정수 타입으로)
-    if amount_field:
-        try:
-            # 쉼표 제거 후 변환 시도
-            df["금액"] = df[amount_field].astype(str).str.replace(",", "", regex=True).astype(float).astype(int)
-        except Exception as e:
-            print(f"금액 변환 중 오류 발생: {e}")
-            # 문자열 형태의 금액을 숫자로 변환 시도 (예: '₩12,345' -> 12345)
-            try:
-                df["금액"] = df[amount_field].astype(str).str.replace(r'[^\d.]', '', regex=True).astype(float).astype(int)
-                print("특수문자를 제거하여 금액 변환 성공")
-            except Exception as e2:
-                print(f"특수문자 제거 후에도 금액 변환 실패: {e2}")
-                # 그래도 실패하면 임의의 값 생성
-                df["금액"] = 10000  # 임의의 기본값 설정
-                print("금액 변환 실패, 기본값 10,000원 설정")
-    else:
-        # 금액 필드가 없으면 임의의 값 생성
-        df["금액"] = 10000  # 임의의 기본값 설정
-        print("금액 필드를 찾을 수 없어 기본값 10,000원 설정")
+    # 금액 필드 처리 - 간단한 방법으로 숫자만 추출
+    print(f"금액 필드 '{amount_field}' 데이터 처리 중...")
+    
+    # 숫자로 변환 가능한 값만 유효한 것으로 간주 (한 줄로 처리)
+    valid_amount_mask = pd.to_numeric(df[amount_field], errors='coerce').notna()
+    
+    # 유효하지 않은 행 수 출력
+    invalid_rows = (~valid_amount_mask).sum()
+    if invalid_rows > 0:
+        print(f"금액이 없거나 숫자가 아닌 행(반납 항목) {invalid_rows}개를 제외합니다.")
+    
+    # 유효한 행만 선택
+    df = df[valid_amount_mask].copy()
+    
+    # 금액 변환 - 단순화된 방법
+    df["금액"] = pd.to_numeric(df[amount_field], errors='coerce')
+    df["금액"] = df["금액"].astype(int)
+    print(f"금액 변환 성공: 샘플 값 = {df['금액'].head().tolist()}")
     
     # 팀명 처리 (우선순위에 따라)
     if team_fields:
         df["원본팀명"] = df[team_fields[0]].copy()
         for field in team_fields[1:]:
             df["원본팀명"] = df["원본팀명"].combine_first(df[field])
-    else:
-        # 팀 필드가 없으면 임의의 값 생성
-        df["원본팀명"] = "기본팀"
-        print("팀 필드를 찾을 수 없어 '기본팀'으로 설정")
     
     # 매핑 적용
     df["매핑정보"] = df["원본팀명"].apply(lambda x: mapping_utils.apply_mapping(x, mapping_dict))
@@ -198,6 +226,18 @@ def load_and_preprocess_data(input_file: str, config: Dict[str, Any], mapping_di
     
     # 매핑된 항목만 선택 (CD_ACCT와 CD_PJT가 있는 항목만)
     df_filtered = df[(df["CD_ACCT"] != "") & (df["CD_PJT"] != "")].copy()
+    
+    # 매핑되지 않은 팀명 정보 출력
+    if len(df_filtered) < len(df):
+        unmapped_teams = df[~df.index.isin(df_filtered.index)]["원본팀명"].unique()
+        print(f"매핑되지 않은 팀명 {len(unmapped_teams)}개:")
+        for team in unmapped_teams:
+            print(f"- '{team}'")
+        
+        # 매핑되지 않은 항목이 있으면 경고 (전체 다 매핑 안 되는 경우만 오류)
+        if len(df_filtered) == 0:
+            raise ValueError("모든 팀명이 매핑되지 않았습니다. 매핑 파일을 확인해주세요.")
+    
     print(f"매핑된 항목: {len(df_filtered)}개 / 전체 {len(df)}개")
     
     return df, df_filtered

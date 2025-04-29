@@ -53,10 +53,28 @@ def process_rental_company(company_name: str):
     print(f"\n'{company_name}' 렌탈사 데이터 처리 완료.")
 
 
-def process_rental_company_with_voucher(uploaded_file_path, voucher_number):
+def process_rental_company_with_voucher(uploaded_file_path, voucher_number, employee_number):
+    """
+    특정 렌탈사의 데이터 처리 (웹 인터페이스용)
+    
+    Args:
+        uploaded_file_path: 업로드된 파일 경로
+        voucher_number: 전표번호
+        employee_number: 사원번호 (필수)
+        
+    Returns:
+        출력 파일 경로
+    """
+    # 사원번호 필수 검증
+    if not employee_number or not employee_number.strip():
+        raise ValueError("사원번호를 입력해주세요. 사원번호는 필수 입력값입니다.")
+    
     company_name = "한국렌탈"
-    company_config = cfg.RENTAL_COMPANIES[company_name]
-
+    company_config = cfg.RENTAL_COMPANIES[company_name].copy()  # 설정을 복사해서 사용
+    
+    # 사원번호 설정 - 입력된 값 사용
+    company_config['id_write'] = employee_number.strip()
+    
     mapping_file = company_config['mapping_file']
     mapping_dict = mapping_utils.load_mapping_file(mapping_file)
 
@@ -123,6 +141,7 @@ def main():
     parser = argparse.ArgumentParser(description='ERP 자동 전표 생성 프로그램')
     parser.add_argument('-c', '--company', type=str, help='처리할 렌탈사 이름')
     parser.add_argument('-a', '--all', action='store_true', help='모든 렌탈사 처리')
+    parser.add_argument('-e', '--employee', type=str, default='00616', help='사원번호 (기본값: 00616)')
     
     args = parser.parse_args()
     

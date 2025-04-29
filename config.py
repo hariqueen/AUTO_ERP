@@ -31,7 +31,6 @@ RENTAL_COMPANIES = {
         'cost_center': '5020',     # 코스트센터(운영2)
         'expense_acct': '53000',   # 기본 비용 계정
         'payable_acct': '25300',   # 미지급금 계정
-        'id_write': '00616',       # 사원번호 (김하리)
         'cd_company': '1200',      # 회사 코드
         'cd_pc': '1200',           # 회계단위
         'cd_wdept': '1010',        # 작성부서
