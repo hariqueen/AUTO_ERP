@@ -4,7 +4,7 @@ ERP 데이터 생성 모듈
 import pandas as pd
 from typing import Dict, List, Any, Tuple
 from datetime import datetime
-import config as cfg
+from core import config as cfg
 
 
 def generate_erp_data(df_filtered: pd.DataFrame, company_config: Dict[str, Any]) -> pd.DataFrame:

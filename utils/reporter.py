@@ -1,6 +1,3 @@
-"""
-처리 결과 보고 모듈
-"""
 from typing import Dict, Any
 import pandas as pd
 

@@ -1,9 +1,6 @@
-"""
-데이터 전처리 및 가공 모듈
-"""
 import pandas as pd
 from typing import Dict, List, Any, Tuple
-import mapping_utils
+from mappers import mapping_utils
 
 
 def load_and_preprocess_data(input_file: str, config: Dict[str, Any], mapping_dict: Dict[str, Dict[str, str]]) -> Tuple[pd.DataFrame, pd.DataFrame]:

@@ -4,7 +4,7 @@
 import os
 import pandas as pd
 from typing import Dict, Any
-import config as cfg
+import core.config as cfg
 
 
 def load_erp_form_template(erp_form_file: str) -> pd.DataFrame:
