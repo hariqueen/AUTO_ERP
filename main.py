@@ -4,12 +4,12 @@ ERP 자동 전표 생성 메인 실행 파일
 import os
 import argparse
 from datetime import datetime
-import config as cfg
-import mapping_utils
-import data_processor
-import erp_generator
-import file_handler
-import reporter
+from core.config import RENTAL_COMPANIES, OUTPUT_DIR
+from mappers.mapping_utils import load_mapping_file
+from processors.rental_processor import load_and_preprocess_data, summarize_data
+from generators.korea_rental_gen import generate_erp_data, prepare_erp_columns, set_management_items
+from utils.file_handler import load_erp_form_template, prepare_file_with_template, save_to_files
+from utils.reporter import print_data_summary
 import pandas as pd
 from pyexcel_xls import save_data
 from collections import OrderedDict
@@ -22,11 +22,11 @@ def process_rental_company(company_name: str):
     Args:
         company_name: 처리할 렌탈사 이름
     """
-    if company_name not in cfg.RENTAL_COMPANIES:
+    if company_name not in RENTAL_COMPANIES:
         print(f"오류: '{company_name}' 렌탈사 설정을 찾을 수 없습니다.")
         return
     
-    company_config = cfg.RENTAL_COMPANIES[company_name]
+    company_config = RENTAL_COMPANIES[company_name]
     print(f"'{company_name}' 렌탈사 데이터 처리 시작...")
     
     input_file = company_config['input_file']
@@ -34,21 +34,21 @@ def process_rental_company(company_name: str):
     erp_form_file = company_config['erp_form_file']
     output_csv = company_config['output_csv']
     output_excel = company_config['output_excel']
-    report_file = os.path.join(cfg.OUTPUT_DIR, f'보고서_{company_name}_{datetime.now().strftime("%Y%m%d")}.txt')
+    report_file = os.path.join(OUTPUT_DIR, f'보고서_{company_name}_{datetime.now().strftime("%Y%m%d")}.txt')
     
-    mapping_dict = mapping_utils.load_mapping_file(mapping_file)
-    df, df_filtered = data_processor.load_and_preprocess_data(input_file, company_config, mapping_dict)
-    summary = data_processor.summarize_data(df_filtered, mapping_dict)
-    erp_df = erp_generator.generate_erp_data(df_filtered, company_config)
-    erp_df = erp_generator.prepare_erp_columns(erp_df)
-    erp_df = erp_generator.set_management_items(erp_df, df_filtered, company_config)
+    mapping_dict = load_mapping_file(mapping_file)
+    df, df_filtered = load_and_preprocess_data(input_file, company_config, mapping_dict)
+    summary = summarize_data(df_filtered, mapping_dict)
+    erp_df = generate_erp_data(df_filtered, company_config)
+    erp_df = prepare_erp_columns(erp_df)
+    erp_df = set_management_items(erp_df, df_filtered, company_config)
     
-    erp_form = file_handler.load_erp_form_template(erp_form_file)
-    result_df = file_handler.prepare_file_with_template(erp_df, erp_form)
+    erp_form = load_erp_form_template(erp_form_file)
+    result_df = prepare_file_with_template(erp_df, erp_form)
     
-    file_handler.save_to_files(result_df, output_csv, output_excel, len(erp_df))
-    reporter.print_data_summary(summary, company_config)
-    # reporter.generate_report_file(summary, erp_df, report_file)
+    save_to_files(result_df, output_csv, output_excel, len(erp_df))
+    print_data_summary(summary, company_config)
+    # generate_report_file(summary, erp_df, report_file)
     
     print(f"\n'{company_name}' 렌탈사 데이터 처리 완료.")
 
@@ -70,19 +70,19 @@ def process_rental_company_with_voucher(uploaded_file_path, voucher_number, empl
         raise ValueError("사원번호를 입력해주세요. 사원번호는 필수 입력값입니다.")
     
     company_name = "한국렌탈"
-    company_config = cfg.RENTAL_COMPANIES[company_name].copy()  # 설정을 복사해서 사용
+    company_config = RENTAL_COMPANIES[company_name].copy()  # 설정을 복사해서 사용
     
     # 사원번호 설정 - 입력된 값 사용
     company_config['id_write'] = employee_number.strip()
     
     mapping_file = company_config['mapping_file']
-    mapping_dict = mapping_utils.load_mapping_file(mapping_file)
+    mapping_dict = load_mapping_file(mapping_file)
 
-    df, df_filtered = data_processor.load_and_preprocess_data(uploaded_file_path, company_config, mapping_dict)
-    summary = data_processor.summarize_data(df_filtered, mapping_dict)
-    erp_df = erp_generator.generate_erp_data(df_filtered, company_config)
-    erp_df = erp_generator.prepare_erp_columns(erp_df)
-    erp_df = erp_generator.set_management_items(erp_df, df_filtered, company_config)
+    df, df_filtered = load_and_preprocess_data(uploaded_file_path, company_config, mapping_dict)
+    summary = summarize_data(df_filtered, mapping_dict)
+    erp_df = generate_erp_data(df_filtered, company_config)
+    erp_df = prepare_erp_columns(erp_df)
+    erp_df = set_management_items(erp_df, df_filtered, company_config)
 
     # 전표번호 채워넣기
     if 'ROW_ID' in erp_df.columns:
@@ -91,22 +91,18 @@ def process_rental_company_with_voucher(uploaded_file_path, voucher_number, empl
         erp_df['NO_DOCU'] = voucher_number
 
     # ERP 양식 로드
-    erp_form = file_handler.load_erp_form_template(company_config['erp_form_file'])
+    erp_form = load_erp_form_template(company_config['erp_form_file'])
 
     # ERP 양식에 맞춰서 데이터 준비
-    result_df = file_handler.prepare_file_with_template(erp_df, erp_form)
+    result_df = prepare_file_with_template(erp_df, erp_form)
 
     # 저장
     output_filename = f"자동전표_완성파일_{datetime.now().strftime('%Y%m%d')}.xls"
-    output_path = os.path.join(cfg.OUTPUT_DIR, output_filename)
+    output_path = os.path.join(OUTPUT_DIR, output_filename)
 
-    os.makedirs(cfg.OUTPUT_DIR, exist_ok=True)
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     try:
-        # pyexcel_xls와 OrderedDict 모듈 임포트
-        from pyexcel_xls import save_data
-        from collections import OrderedDict
-        
         # 데이터프레임을 리스트로 변환
         headers = result_df.columns.tolist()
         data = [headers]  # 헤더를 첫 번째 행으로 추가
@@ -146,7 +142,7 @@ def main():
     args = parser.parse_args()
     
     if args.all:
-        for company_name in cfg.RENTAL_COMPANIES.keys():
+        for company_name in RENTAL_COMPANIES.keys():
             process_rental_company(company_name)
             print('-' * 80)
     elif args.company:
