@@ -8,8 +8,10 @@ from core.config import RENTAL_COMPANIES, OUTPUT_DIR
 from mappers.mapping_utils import load_mapping_file
 from processors.rental_processor import load_and_preprocess_data, summarize_data
 from generators.korea_rental_gen import generate_erp_data, prepare_erp_columns, set_management_items
-from utils.file_handler import load_erp_form_template, prepare_file_with_template, save_to_files
-from utils.reporter import print_data_summary
+from utils import (
+    load_erp_form_template, prepare_file_with_template, save_to_files,
+    print_data_summary, generate_report_file
+)
 import pandas as pd
 from pyexcel_xls import save_data
 from collections import OrderedDict
